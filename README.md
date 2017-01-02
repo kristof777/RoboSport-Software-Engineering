@@ -13,9 +13,8 @@ Project: Robosport
 
 My Work on Documentation:
 
-	I contributed to the overall project as much of is was writing documents as a group. For an example of 
-	exclusively my work look at the Interpreter section of the Design document.
+	For an example of exclusively my work look at the Interpreter section of the Design document.
 	
 My Work on Implementation:
 
-	I implemented The Interpreter as well as most of the interpreter functions.
+	For an example of finalized code that I worked on, go to the Interprerter and InterpreterFunctions classes.
