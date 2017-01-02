@@ -1,0 +1,14 @@
+Michael Graham Pair Programming with Sam Horovatin
+    22/11/2016 @ 1:30PM - 5:00pm
+
+    Me and Sam met up at the MLC on Tuesday to discuss how we were going to implement the gameboard and draw it. We wanted to ensure that all hexes were evenly spaced, the same size and the correct orientation. We also wanted the boards size to be easily changed, so math would have to be used to correctly space each element. For the first hour we discussed how we were actually going to store the coordinates of actual hexes, debating on an axial, cube and cartesian coordinate system as discussed on this page: http://www.redblobgames.com/grids/hexagons/. We decided that the cartesian system would be easiest as we could use the actual pixel location of each hexagon as the key for the hexagon IF it was stored in a hashmap. An example of how we were storing this would be Hash<Pair<x, y>, <Coordinate>>... (See code review with Krisof Mercier to see important change).
+
+    From there, we decided how we were going to draw the hexagons. As Swing did not have hexagons defined as a default shape type we decided on using a polygon that we defined ourselves with exact points. We were able to get the board successfully drawn, but for some reason the hexagons wouldn't draw in their correct orientation (pointy instead of flat which was a mistake with my math I later found out). Before Sam left we discussed what we should work on next.
+
+    Synopsis:
+    We decided on what coordinate system we would use, implemented it, created a UI, and encountered a problem that we couldn't figure out. We discussed what we would like to do next, and I set to work on implementing a mouse listener and corresponding functions as well as classes to find out what hex the user clicked on.
+
+Michael Graham Pair Programming & Code Review with Kristof Mercier
+    26/11/2016 @ 4:30 - 6:00pm
+
+    Before doing anything further me and Kristof went over what I had worked on with Sam (and continued to work on by myself). After a lengthy explanation of everything that was going on Kristof asked me why I was storing a Hashmap keyed to a Point with a value of a Coordinate, (hashmap<Pair<int,int>,Coordinate>) as both the key and the value were the exact same. This led to a slight refactoring of most functions as we decided that it would be best to store a Hashmap keyed to a Coordinate with a value of a polygon (hashmap<Coordinate, Polygon>). In doing so, we reduced the amount of Hashmaps in our system by one, and greatly simplified another. I asked Kristof to stick around and go through the code with me as I fixed all problems with the resultant functions. Fortunately, this change did not affect our tests that Sam had been working on in any negative manner.

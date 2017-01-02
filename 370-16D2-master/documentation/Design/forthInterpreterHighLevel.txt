@@ -1,0 +1,10 @@
+
+
+JSON object to store variables
+
+int loadVariables(robot);
+	This is called at runtime to create a dictionary of the variables that will be needed by the AI program.
+	This will also initialize those variables and exit the function once a forthword is ":" signifying the start of the actual function.
+	
+return 0 if it succeeded
+

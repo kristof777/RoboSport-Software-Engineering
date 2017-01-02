@@ -1,0 +1,36 @@
+Group Rules
+
+Meetings:
+	Attendance:
+	Group members must attend planned meetings unless two days notice is given.  
+	In this case they must, according to the meeting agenda, provide a document 
+	that will allow another group member to speak on their behalf during the 
+	meeting.
+	Preparation:	
+	Group members must have read the meeting agenda in advance as well as made 
+	preparations including written notes.  Group members should try to keep 
+	their presentations during the meetings as brief as possible.
+	Rules:
+	People who have the floor to speak should not be interrupted unless they ask
+	a question or their time is up. If there is something more to discuss, it 
+	can be brought up after they have finished their presentation.
+
+Assigned Tasks:
+	Group members should be able to give at least a two day notice if they 
+	cannot complete a task before a deadline.  Group members should also be 
+	able to give an estimation as to how much time a task will take for them 
+	to complete.
+
+Communication:
+	Group communication is to be done through Slack.  Group members are 
+	expected to be able to respond to slack group messages in a short amount of
+	time.  It is recommended to get the slack application for mobile devices, 
+	but daily checking of the slack group is sufficient.
+	
+Etiquette:
+    Group members are expected to treat each other with respect at all times, 
+    and larger conflicts should be brought to the entire group.
+    Group memebrs are also expected to be honest in there ability to complete a
+    task or meet deadlines. If it is the case where by a group memeber cannot 
+    meet a deadline, for whatever reason, they are to notify the group.
+    

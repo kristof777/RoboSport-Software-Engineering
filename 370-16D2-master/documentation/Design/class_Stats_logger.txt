@@ -1,0 +1,47 @@
+interactions:
+-SetupController: creates the JSON for the file
+-InputController: records data from player moves
+-InterpreterFunctions: records data from robot moves
+-Game Master: passes the stats logger around to the views, records wins/losses
+statistics
+
+
+--Variables--
+-statsJSON: JSON
+	example JSON for a robot:
+{teamname:
+	robotname:	
+		 "team" : a team number: "A1" ... "D5"
+		, "class" : "Scout" or "Sniper" or "Tank"
+		, "name" : the robot name
+		, "matches" : a number
+		, "wins" : a number
+		, "losses" : a number
+		, "executions" : a number
+		, "lived" : a number
+		, "died" : a number
+		, "absorbed" : a number
+		, "killed" : a number
+		, "moved" : a number}
+	robotname2:
+--Functions--
+
++StatsLogger(): reates and initializes a JSON list of all the robots
++updateMatches(robotID): updates the wins of a robot
++updateLosses(robotID): updates the losses of a robot
++updateLived(robotID): updates the lived stat of a robot
++updateDied(robotID): updates the died stat of a robot
++updateAbosorbed(robotID, amount): updates the damage taken of a robot
++updateKilled(robotID): updates the robots killed
++updateMoved(robotID): updates the moves a robot has made  
++getStats(robotID): returns the JSON containing the stats of that robot
++getStats(team): returns the stats for that team
++getStats(): returns the JSON of all stats
+
+
+Justification:
+-system needs to store stats hence a stats logger
+-JSON has very fast look up time so directly accessing the JSON makes the most sense
+-the robot class is already getting large so including more functionality into it would be bad
+-having all the data in one place will make displaying and uploading it easier
+

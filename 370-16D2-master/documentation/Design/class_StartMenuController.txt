@@ -1,0 +1,20 @@
+--------------
+// Class: StartMenuController
+--------------
+
+What it is: The StartMenuController is responsible for the control of the StartMenu.
+
+Why it is important: We decided that it would be best to have a controller for each view of the game. This way it reduces the overall size of the main controller (GameMaster), and reduces coupling.
+
+--------------
+// Variables:
+--------------
+    :NONE:
+
+--------------
+// Functions:
+--------------
++   StartMenuController()               // Constructs the StartMenuController, and also initializes the StartMenuView
+
+-   closeView()                         // Ends the view StartMenuView
+-   onButtonPress(:button (start))      // closeView, instantiate SetupController

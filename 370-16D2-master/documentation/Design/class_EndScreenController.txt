@@ -1,0 +1,25 @@
+--------------
+// Class: EndScreenController
+--------------
+
+What it is: The EndScreenController is responsible for the control of the EndScreen (what is displayed at the end of the game. It is activated by the GameMaster when all teams have been eliminated and it is responsible for instantiating the EndScreen as well as the MainMenuController when the BACK button is pressed.
+
+Why it is important: We decided that it would be best to have a controller for each view of the game. This way it reduces the overall size of the main controller (GameMaster), and reduces coupling.
+
+
+USED BY: GameMaster
+USES: StatsLogger, EndScreenView
+
+--------------
+// Variables:
+--------------
+    :NONE:
+
+--------------
+// Functions:
+--------------
++EndScreenController(:jsonObject)   // The constructor of the EndScreenController. Instantiates the EndGameView and also passes it the data at the same time
+
+-updateStats()                             // Throws the stats at the RobotLibrarian (server)
+-closeView()                               // Starts the MainMenuController
+-onButtonClick(:button (back))             // updateStats, closeView, instantiate MainMenuController

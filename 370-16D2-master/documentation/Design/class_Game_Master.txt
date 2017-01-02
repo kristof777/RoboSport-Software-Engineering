@@ -1,0 +1,30 @@
+Justification:
+-seperation of classes based on what they do increases cohesion, also makes it
+easier to think about and design the classes themselves by putting them
+into a defined compartment
+-need something running the game, determining turns, calling relavant views, having that spread out among the controllors would
+get confusing
+
+Description:
+-the in game controller-> calls views needed while the game is running, determines turns and what to do for them, knows when game ends
+
+Interactions:
+Stats Logger: passes it to different controllers, stats logger records game loss and wins
+Game Model: passes data from Game Model to views for display
+Team: uses Team
+AI Interpretter: calls AI Interpreter
+EndScreen: calls EndScreen
+PassTheControls: calls PassTheControls
+Game View: calls GameView
+
+Variables:
+teams[]: circular collection of teams for turns
+robot[] * X: X=# of teams, creates a list of robots for each team for turns
+
+
+Functions:
+determineTurn(): determins whos turn it is 
+gameOver(): determines when the game is over
+isAI(robot): determines if a robot is AI
+moveAIRobot(robot): calls AI move function
+updateTurnList(): removes dead robots from turn lists

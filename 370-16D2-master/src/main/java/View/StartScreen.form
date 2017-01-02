@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.StartScreen">
+  <grid id="27dc6" binding="start" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="50" vgap="0">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="1213" height="1013"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+      <enabled value="false"/>
+      <name value="RobSport370D2"/>
+      <preferredSize width="1300" height="990"/>
+      <requestFocusEnabled value="true"/>
+    </properties>
+    <border type="bevel-lowered" title-justification="1">
+      <title-color color="-4473925"/>
+    </border>
+    <children>
+      <grid id="1a146" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="true" same-size-vertically="true" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="629b6" class="javax.swing.JButton" binding="QuitButton">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="6" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="94" height="42"/>
+              </grid>
+            </constraints>
+            <properties>
+              <focusable value="true"/>
+              <font name="Roboto Medium" size="18" style="0"/>
+              <label value="Quit"/>
+              <text value="Quit"/>
+            </properties>
+          </component>
+          <component id="acc4" class="javax.swing.JButton" binding="StartButton">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="2" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="447" height="42"/>
+              </grid>
+            </constraints>
+            <properties>
+              <focusable value="true"/>
+              <font name="Roboto Medium" size="18" style="0"/>
+              <hideActionText value="true"/>
+              <label value="Start"/>
+              <text value="Start"/>
+            </properties>
+          </component>
+          <component id="9d766" class="javax.swing.JButton" binding="InstructionsButton">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="10" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="94" height="42"/>
+              </grid>
+            </constraints>
+            <properties>
+              <focusable value="true"/>
+              <font name="Roboto Medium" size="18" style="0"/>
+              <label value="Instructions"/>
+              <text value="Instructions"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="d4ff4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="7" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="1100" height="900"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="StartScreen.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

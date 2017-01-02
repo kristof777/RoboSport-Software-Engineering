@@ -1,0 +1,20 @@
+The game view starts with awaiting input from a player.  If a player chooses to move they click on the move button and then
+onto the legal tile they wish to move to.  The Input Controller prompts the view to redraw to the robot sprite, moving it 
+to the new location, and calls the robot to actually move the robot in the model.  After the move the Stats Logger records
+the move and the player can make another move (if they have moves remaining) or attack (if they have attacks remaining).
+
+If the player chooses to attack they click on the attack button then on a legal hex within range of their robot to send
+their attack to.  The input controller is called to handle the event then the Input Controller calls the robot to make the
+attack on the Game Model.  The system then calls up, back to the Input Controller, which checks if the robot attacked
+is dead and if so tells the stat logger to update killed robots.  Still under this conditional the system redraws the robots
+and then checks to see if the game is over.  The Game Master is called to check if the game is over and if it is the End Game 
+screen is created by the Game Master.
+
+After the player has done their moves or no longer wishes to continue their turn they click the End Turn button and the Input Controller calls back to the Game Master which creates the Pass the Controller View passed with  the teamName.  Once OK has been pressed on that screen the Input Controller then calls back to the Game Master which starts the next turn.
+
+
+Did not include hover over tile function since it is not a part of the events
+that take place that bring about the completion of turns or the game.  It is
+simply a function of the system that could be taken advantage of by the user if
+they chose to.
+

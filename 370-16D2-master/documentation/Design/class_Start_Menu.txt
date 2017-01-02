@@ -1,0 +1,32 @@
+StartScrean Class:
+
+1.	Description: StartScrean class is a view class that displays information and user input 
+options upon initial program execution.
+
+   The elements that are displayed on StartScrean are as follows:
+*	The Game Title
+*	A Graphic
+*	A start button
+*	A instruction button
+*	A end button
+
+2.	Interactions that are present are:
+
+*	StartScrean is called upon by StartupController as the initial view being displayed
+*	All input from buttons on StartScreen are handled by StartupController
+
+3.	No global class variables are needed for StartScrean
+
+4.	The functions to be used in StartScrean are as follows (NA standing for no explanation 
+needed):
+
+*	buttonListener(): listens for button selection and calls respective controller function
+from StartupController
+
+*	constructor (): Setup is used on initial opening of view and displays the Game Title, 
+Graphic, and buttons to the screen.
+
+
+Justification:
+- display actions for the StartScrean are unquie to it and thus need's a unquie class
+- a start menu is needed to allow for ease of use

@@ -1,0 +1,19 @@
+UML: 
+-   UML_High_Level_View
+-   UML_Model
+-   UML_Controller
+-   UML_View
+-   UML_Interpreter
+
+Class files:
+-   Class_(classname)
+
+Class names (We will be using CamelCase): 
+-   Classes will be: ClassName
+-   Variables will be: variableName
+
+Class methods:
+-   onButtonClick();
+
+Global variables:
+-   ALL_CAPS;

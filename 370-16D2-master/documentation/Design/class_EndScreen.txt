@@ -1,0 +1,40 @@
+EndScreen Class:
+
+1.	Description: EndScreen class is a view class that displays information about a match at the 
+conclusion of a match. It also provides options on how the player could proceed.
+
+The elements that are displayed by EndScreen are as follows:
+*	A back button
+*	A save stats button
+*	A quit button
+*	A stats table that displays the following in its cells:
+o	Individual tanks statistic including how much damage taken/delivered, match 
+survival, what team it was on, how many times it moved, and how many times 
+its won and lost over all (including result of recently concluded game)
+*	A single column table showing win/loss of teams
+
+2.	Interactions present are:
+
+*	All of EndScreen�s input is handled by EndController
+*	EndScreen  needs knowledge of StatsLogger information for display in stats table, 
+provided by EndController
+
+3.	No global class variables are needed for Start Menu
+
+4.	The functions to be used in Start Menu are as follows (NA standing needed):
+
+*	constructor (String *): setup initializes the page with all elements being displayed. It 
+needs a structure of strings inputted to allow for proper initialization of stats table. 
+String should be formatted as follows: Team, Name, Type, damage taken, damage 
+delivered, (true or false) match survived, movements made, and if it won or lost. There 
+should be a string in the structure for every tank in the game.
+*	statsTable(String *): populates with given structure of strings.
+*	buttonListener(): listens for any button press and signifies the appropriate controller 
+function from endController
+
+
+
+       Justification:
+*	The endgame has a unique display element (Stats table) which no other view displays, 
+thus an individual view class is needed to present this.
+*	A separate view class is needed to conform to the design patter of MVC

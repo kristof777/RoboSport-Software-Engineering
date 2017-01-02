@@ -1,0 +1,95 @@
+--------------------------Programmers Doc---------------------------------
+
+Main idea: what needs to be communicated for the continual developement of this system?  Programmers need to know what
+architecture our system follows so they can add components.  They need to know how to use the functions that are already
+implemented so they can use them inside their added parts.  As extra knowing what has been tested and working and HOW it was
+tested is useful so programmers could know where there might be errors.  Also extra would be a System Maintenence section
+which would show error codes and their meanings as well as how we handled changes going from design to give them an idea 
+how to handle changes going forward.
+
+
+Major Sections (first three are probably most important, the rest are cakey gravy):
+1. Description of what our System does on a more techinical level
+2. Description of system architecture, components and classes
+3. The java docs. (which can encompass the classes part of 2.)
+4. What has been tested and how was it tested.
+5. System Maintenence.  Troubleshooting for programmers, how our design has handled the changes in our system as we 
+implemented things.  (read: how did our architecture influence changes and how did our system allow for changes)
+
+
+
+
+
+System Specification: What our system does at a more technical level. 
+(description copied from requirements doc, change to what our system is now if there are any differences)
+
+Our task is to design and create a version of the pre-existing, computer based board game called Robo-Sport. The game
+can be played with two, three, or six teams of robots; each team with their own color. Any of the teams may be
+controlled by either a computer player or a human player. The game map takes the form of a large hexagon, the shape
+of which is made-up of a collection of smaller hexagon tiles (see figure 1). The size of the game board (or the amount of
+tiles) depends on the number of teams in the game. Each team begins at the corner of the hexagon which matches their
+team’s color.
+Figure 1: The game map is a large hexagon made up of smaller hexagons. The size of the
+game board is dependant on the number of players in the game. Each team’s starting point is
+located in one of the hexagons corners.
+Each player controls a team of three robots: a scout, a sniper, and a tank. Each of the three robots has its own unique
+statistics regarding health, movement, range, and severity of attack. Each of the robots are limited by a set visual field,
+enabling them to see either one, two, or three hexagons in any direction. This visual field is equal to the individual
+robot’s range of fire. Although each of the robots has its own set of behaviors and statistics, they share the primary goal
+of finding and attacking the other team’s robots.
+Each type of robot can withstand a different number of attacks. Once a robot has been attacked to its limit of health, it is
+removed from the game board and the game continues until only one team is left. The last remaining team on the game
+board is the winner. If the game continues for a certain predetermined amount of time, the game ends in a draw.
+
+
+
+How to install: (something like this...) include main class (the one that actually starts the game running n stuff)
+How to Run:
+To run navigate to the folder where the .jar is located inside your command line (or terminal) and type:
+java -jar robo-sport.jar
+
+
+
+
+Or open up intellij, open a new project with files you downloaded from git and run it
+Coding documentation usually goes here as well as test documentation.  We already wrote those.  
+
+
+
+
+Description of System Architecture (copied from Design doc, left out justification since at this point the system is 
+completed and it doesn't matter our justification since it is how it is):
+The architecture for this system is a Layered Architecture that uses a Model-View-Controller (MVC) design pattern and
+independent Aspect-Oriented Components. Not only will this allow for new developers to easily understand the system
+without getting lost in the implementation, but it will increase the system’s extensibility, reliability and reduce the
+amount of maintenance required. This is because the use of the MVC design pattern forces developers to separate the
+concerns of each individual class. In turn, this results in a reduction of the total amount of coupling that takes place in
+the system. A bonus side effect of this is that the amount of time spent on system upkeep when changes are made to a
+component is greatly reduced, as developers can locate the affected areas quickly. The MVC design pattern is a good
+choice for Robo Sport because it allows for the game’s data, logic and display to be separate entities, resulting in a clean
+and extensible system. The use of additional Aspect-Oriented Components allows for system diversity and extensibility,
+as users are able to define their own AI as well as their AI’s functions using Forth.
+
+
+Some kind of description for each component (maybe the UML diagrams from our design doc updated to fit the current state
+of our system?) ONLY FOR TRICKY PARTS: GAMEMASTER? GAMEBOARD? STARTUPMENUCONTROLLER?
+An interface for each major class (covered by javadocs, this would maybe be an extra bit): listing off each class and it's
+functions with short descriptions of what they do (classes listed above?)
+
+
+
+
+Libraries our system uses: Different collections, GSON, java.util?....
+
+
+
+
+Description of what kind of tests our system HAS passed (very similiar to test doc but now we are listing what tests our
+system has actually passed.  SAM!!!)
+
+
+
+
+
+System Maintenence:  known errors and how-to's at the code level (exceptions that get thrown could go here)
+-

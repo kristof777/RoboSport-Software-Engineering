@@ -1,0 +1,27 @@
+View Description:	The view in our system encompasses any and all classes that display information 
+to the screen. The view interacts with the controller to get information from the model. The view does 
+not directly interact with model. Instead, the controller acts as an intermediate class, doing any model 
+inquire or logical background work. The view contains the following classes:
+*	StartMenu
+*	SetupMenu
+*	PassController
+*	EndScreen
+*	GameView
+
+Model Description:	The model in our system encompasses all storage of information that can be 
+modified during the course of the execution. Inquiries on information stored within the model are made 
+by the controller, who will in turn make modifications to the content of the model. The model contains 
+the following classes:
+*	Robot
+*	Team
+*	GameBoard
+*	StatsLogger
+
+Controller Description: 		The controller in our system encompasses all logical operations and is 
+the main brain in the system. It interacts with the model by inquiring about model content and modifies 
+model content when appropriate. Any information needed by the view is given to the view from the 
+controller. What the view is displaying is also dictated by the controller. Finally the controller is the only 
+aspect of the architecture to communicate with the forth interpreter.
+
+Interpreter Description:        The interpreter is an independent component that acts as a translation for 
+Forth code so that it can be run on the system. The controller will call the interpreter when it runs a computer player robot's turn. 

@@ -1,0 +1,7 @@
+GameMaster:
+variables:
+int turnNumber: the number of turns that have been taken this round
+int turnLength: how many turns are in a round
+
+functions:
+findGang(String robotID): finds the index for a gang containing the robot described by robotID

@@ -1,0 +1,15 @@
+delta change log:
+Robots:
+	-added setMovesRemaining(): refreshes the robots moves
+	-added setCanShoot(): changes the robots canShoot var to true
+	-getMovement(): returns the max distance a robot can move (assuming it has all it's moves)
+	-initSprites(): loads the corresponding image for each robot
+	-getStartingCoord(int direction): gets the coordinate this robot starts at
+	-getColour(): gives the colour of the robot
+	-getDirection(): gives the direction the robot is facing
+	-getRange():gets the range of the robot
+	-receiveMsgTest(): a function for testing messaging
+	-mailFull(): returns if the inbox is full or not
+	-getInbox(): returns the inbox of the robot
+	-getSprite(): returns the sprite for the robot
+	-getCurrentRotation(): gets the robots current rotation in radians

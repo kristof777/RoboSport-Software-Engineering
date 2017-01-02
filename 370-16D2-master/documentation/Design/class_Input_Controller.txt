@@ -1,0 +1,33 @@
+Justification:
+-want to avoid massive controllers that do everything
+-put like controller activites together to increase cohesion -> all in game controls by players
+-illegal input will be made impossibly by the game master + view so exception and error handling
+in player input is not necessary
+
+Description:
+-handler of in game player input that calls the robots move functions based off of player input
+-handles illegal moves by throwing an exception
+-also handles player forfiet
+
+Interactions:
+robot: calls robot move functions
+game view: recieves events from listeners in the game view
+team: uses team for concede option
+
+--Variables--
+NONE!
+
+
+--Functions--
+move(coord, robot): calls the robots move function with parameter coord as turn
+			  with the amount of turns neccesarry to complete the move
+shoot(coord, robot): calls the robots shoot function with parameters coord
+concede(team): kills all a gangs robots removing them from the game
+
+risk:
+illegal input isn't detected and a player makes an illegal move
+
+
+
+
+

@@ -1,0 +1,92 @@
+-----------------------------USER DOC--------------------------------
+
+3 major sections: 
+1. Functional Description. Outline of what the system is, what you need to run it and how to run it.
+2. User guide: How the normal user would use the system.
+3. Error Handling: List of errors and how to troubleshoot them.
+
+
+
+
+
+Functional Description:  Give a description of what is required to run the system as well as an outline of what the system
+is supposed to do (or be used for) (copied from req doc)
+
+
+The minimum hardware required is as follows: (EXTRA!)
+OS: Windows 7 or higher (since we are using Java it doesn't matter what OS we are on, maybe remove and instead list Java
+SDK here?)
+Processor: Intel® Xeon® Processor E5-2690 v3 (30M Cache, 2.60 GHz)
+Memory: 2 GB Ram
+Storage: 500 MB available space
+The Recommended hardware required is as follows:
+  OS: Windows 7 or higher
+  Processor: Intel® Xeon® Processor E5-2690 v3 (30M Cache, 2.60 GHz)
+  Memory: 4 GB Ram
+ Storage: 1 GB available space
+Software requirements are as follows, but not limited to: (I think only java JDK 1.8 or higher is required to run our
+program)
+  Git
+  Intellij IDEA
+  JDK 1.8 or higher
+
+
+How to Run: (EXTRA!)
+To run navigate to the folder where the .jar is located inside your command line (or terminal) and type:
+java -jar robo-sport.jar
+
+Or open up intellij, open a new project with files you downloaded from git and run it
+
+
+Description of game:
+(copied from rec doc)
+
+(maybe revise to a more user oriented description of the game?)
+ 
+Our task is to design and create a version of the pre-existing, computer based board game called Robo-Sport. The game
+can be played with two, three, or six teams of robots; each team with their own color. Any of the teams may be
+controlled by either a computer player or a human player. The game map takes the form of a large hexagon, the shape
+of which is made-up of a collection of smaller hexagon tiles (see figure 1). The size of the game board (or the amount of
+tiles) depends on the number of teams in the game. Each team begins at the corner of the hexagon which matches their
+team’s color
+
+
+
+
+
+User guide: (info needed for a user to run our program, 
+
+How to use system:
+Navigation of menus (maybe a graphic for each screen describing what each button does?, each page could be a window?)
+
+like this maybe? (but for each view): http://imgur.com/a/NSSUx
+
+Description of robot librarian? (certain users might want to use this program for data collection on their AI scripts)
+How to use the robot librarian: say that update and retreval of stats is all automated (unless we choose not to have
+automated connection to the robot librarian).  How to upload your robots to the RLIB? (maybe this is external to our 
+system...)
+
+
+Description of rules (from requirments doc, once again maybe skew it more for a normal user):
+The game rules and control flow will vary slightly depending on the amount of players in the game. If more than one
+human player is participating the game will support a shared-controller multiplayer format for two, three, or six players.
+A team can consist of all human players, all computer players, or a mixture of both. For a two or three player game each
+side of the hexagon will be five tiles in length. For a six player game, each side will be seven tiles in length.
+On the game board, each team begins with all of their robots on their own starting tile. The starting tiles are located at
+the corners of the game board. Turns commence with the red team and move in a clockwise direction until all teams
+have taken a turn. For every turn, only one of the three robots may move. Depending on which robot is in play, it may
+move up to three spaces in any direction. It is possible for more than one robot to occupy the same space at the same
+time. When a robot is within its shooting range from another robot, it may shoot. The range for each robot is specified
+by its range statistic. When a shot is fired at a given tile, damage occurs to all units residing on that tile. A robot is
+capable of both moving and attacking in the same turn. If a robot attacks before it has used all of its moves, it may move
+again after the attack.
+
+
+
+What is our system limitted by? (what didn't we include?  anything?)
+
+
+
+
+Trouble Shooting: 
+What can go wrong in our system? List errors and what the solution to them should be. (if there are any)

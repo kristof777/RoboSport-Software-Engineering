@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.GameScreen">
+  <grid id="27dc6" binding="start" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1446" height="1028"/>
+    </constraints>
+    <properties>
+      <maximumSize width="1446" height="1008"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="ed7dd" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="5" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="72ec" class="View.Game" binding="game">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="1" use-parent-layout="false">
+                <minimum-size width="1000" height="1000"/>
+                <preferred-size width="1000" height="1000"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <vspacer id="fff24">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+        </children>
+      </grid>
+      <grid id="d739" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="1000"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <vspacer id="40a3f">
+            <constraints>
+              <grid row="0" column="1" row-span="4" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="40a1f" class="javax.swing.JButton" binding="moveButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="100" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="12"/>
+              <text value="Move"/>
+            </properties>
+          </component>
+          <component id="4bc8c" class="javax.swing.JButton" binding="attackButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="100" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="12"/>
+              <text value="Attack"/>
+            </properties>
+          </component>
+          <component id="d1594" class="javax.swing.JButton" binding="endTurn">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="100" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="12"/>
+              <text value="End Turn"/>
+            </properties>
+          </component>
+          <component id="fdf4c" class="javax.swing.JButton" binding="forfeitButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="100" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="12"/>
+              <text value="Forfeit"/>
+            </properties>
+          </component>
+          <component id="9d427" class="javax.swing.JButton" binding="turnButton">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Button"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

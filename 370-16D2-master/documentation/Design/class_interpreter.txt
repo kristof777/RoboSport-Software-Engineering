@@ -1,0 +1,62 @@
+Interpreter:
+
+Description:
+    Allows the program to interpret forth code and run equivalent code to alter the model.  
+    This is necessary to allow external robot forth behaviour functions to be run on the system.
+	Each play will consist of a list traversal, calling InterpreterFunctions functions to alter 
+	the model based on what is found in the list.
+	
+    
+Interactions:
+    -Called by The SetUpController at the start of the game to initialize all 
+	of the variables that the forth function needs to use.
+    -Called by Input controller at the start of the robots turn if the robot is a computer player.
+    -Calls the InterpreterFunctions class to run functions based on what it reads while parsing the file.
+    -Calls the robot class to get it's JSON object for forth variables and functions.
+    
+Variables:
+    private LinkedList<String> forthWords
+    private InterpreterFunctions functions
+
+    
+Functions:
+    
+    Interpreter(Robot)
+        calls loadVariables
+	
+    void loadVariables(Robot)
+        Creates a JSON file inside of the Robot to store the variables and function definitions that are declared at the 
+        beginning of the forth text. The forth text can be obtained through the Robot's getJSON method.
+        The function definitions can be called to run later on.
+        
+
+    LinkedList<string> lookUp(String)
+		Looks up the corresponding function or variable in the Robots JSON object.
+		If it is setting the variable, pop from the InterpreterFunctions stack and set the value in the JSON obejct. Return empty list.
+        If getting variable or function definition, parse the string into a LinkedList, where each node contains a word.
+    
+            
+    
+	NOTE: I added clarification to play because it is complicated and needs to be specific to the fourth language.
+    void play(Robot)
+        calls Functions.setRobot to let it know which Robot we are currently working on
+		it then calls parse and adds its output to the ForthWords list.
+    
+        Traverse the list  
+        EG. 
+         "2 dup 1 shoot! "
+         will be translated to the following sequence of IntepreterFunctions function calls:
+         push(2), dup(), push(1), shoot()
+         These functions all are done using postfix evaluation on a stack.  
+         All methods other than push will take their arguments off of the stack.
+		 -Further information on the forth code can be found in the RoboSport370 Language document which can be found in the references section.
+        
+        If a word is encountered that is not recognized, parse must be called with that word given as an arguments.
+		Parse will look up the word in the Robots JSON object and then return a linked list of the words that were found as it's definition.
+		The output List of parse should be added to the forthWords list in place of the variable. 
+		
+		
+
+         
+Risks:
+    If the forth code has syntax errors, the interpreter will not be able to run.

@@ -1,0 +1,34 @@
+Description:
+-the systems level game board
+-player doesn't see
+-contains the locations of all the robots
+
+
+Justification:
+-need someway to represent the game board on the systems level
+-having a centralized place for storage simplifies design 
+-using a hashmap looking up coordinates of robots and robots at coordinates is fast
+	->needs to be done often
+
+
+Interactions:
+Team: needs a collection of all the robots 
+game master: contains a copy of the game board for updating the view
+SetupController:creates the game model initially
+Robot: is used by: robot update coordinates
+
+
+--Variables--
+robotCoord<robotID, coord>: a hashmap that is keyed on robotID and returns the coord the robot occupies
+robotOnCoord<coord, robots[]>:a hashmap that is keyed on a coord and returns a list of robots that are on that coord
+
+
+--Functions--
+GameBoard(teams[]): GameBoard:creates a game board
+
+getRobotsAtCoord(coord): returns a list of robots at a coord
+getRobotCoord(robotID): returns the coord of a robot
+updateCoord(coord, robotID): update the coordinates of a robot
+inRange(robotID): returns a list of robots in range of the given robot
+
+

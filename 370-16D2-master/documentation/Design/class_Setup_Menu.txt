@@ -1,0 +1,46 @@
+Setup Menu Class:
+
+1.	Description: Setup menu class is a view class that displays 
+information and user input options for match setup prior to a game start.
+
+The elements that are displayed on Start menu are as follows:
+*	A map graphic
+*	A table populated with team nodes
+	o	Team node dropdowns & "AI" toggle
+*	A start button
+*	A back button
+
+2.	Interactions that are present are:
+
+*	Setup Menu is called upon by SetupMenuController as indicated by selection of start button displayed by Star Menu
+
+*	All input from buttons or input fields on Setup Screen are handled 
+by MenuController.
+
+(BUTTONS in SetupMenu: six dropdown for team (automatically forces player selection on selecting team), six checkboxes for isAI, one START & BACK)
+(BUTTONS in popup: four drop downs (roboclass, roboteam, roboname, sortby win/loss) and an OK button & CANCEL Button)
+
+----------
+//Variables:
+----------
+- 	roboStatsText : string 					// What is visible in the dynamic section of the robot selection screen
+-	map : Image								// The image that is used on the view
+
+----------
+//Functions:
+----------
+
+listeners:		// Listeners are responsible for checking if a button has been pressed in the view
+-	buttonListener()				// Checks if buttons are pressed in setup menu
+-	popupButtonListener()			// Checks if buttons/dropboxes are pressed in the Setup menu popup
+
+// NOTE: When buttons are pressed these will call the corresponding functions
+
+-	displayRobotSelection()			// Displays a robot selection popup three times allowing players to select a robot for a team
+-	redrawMap()						// Redraws the map overview based if the map size has changed
++	SetupMenu()						// Constructor of a view ... it is called by the SetupMenuController... it initialises all of the buttons on the screen
+
+Justification:
+
+- the setup menu has the second most input options out of all the views, and thus requires a seprate class to handle all input form user.
+- requires unquie input no where else in game

@@ -1,0 +1,34 @@
+The changes that occurred between the design document and the requirements document are as 
+follows:
+*	On the start screen, it was previously described as displaying high scores on this screen. That 
+feature has been subsequently cut as this information will be available to the player on the end 
+screen and would clutter the main screen with information possibly useless to first time players.
+*	On the start screen, the transition from the start screen and the setup menu has been altered. 
+Originally a popup box inquiring into how many players that will play the game with a map 
+graphic displaying team layout. This function has been moved onto the setup screen itself to 
+help increase flow between views.
+*	The above change of the start screen transition would affect the primary scenario 1.2, Setting up 
+a Game. The profile selection and number of teams are now aspects of setting up the game, and 
+as such should be in the layered portion of the 1.2 diagram for start button selection on the 
+main screen.
+*	On the setup menu, the selection of profile and robots has been changed slightly. The selection 
+of player or AI controlled player entity is the same, but there is now a selection for NA, changing 
+the total number of players in the match. This change will permeate to the number of player 
+elements now displayed on the setup menu. The map, which is now displayed on setup screen, 
+will update with any change in player elements, when appropriate.
+*	On the main game view the general stats overview for all robots has been removed. The mouse 
+over functionality for viewing stats is sufficient and the general stats overview would give the 
+player information the AI would not have access to.
+*	On the main game view there has been a concede button added to the attack and move 
+grouping. This button, when pressed will remove that teams tanks from battle. There turn from 
+thus on will be skipped as if they had no tanks left.
+*	On the completion of a game, in the original requirements docs, it was stated that a statistical 
+overview of the game as to appear overtop of the board. Well this view remains consistent with 
+the one described, it is separated from game view completely. It does not appear above the 
+game or as a dialog box above it; it is instead displayed in the same window as the game view, 
+replacing it on the screen.
+*	The original actors identified for the system are Robot Librarian, Computer Player, and Human 
+Player. We have since identified a fourth actor, the Game Master. The Game Master would be 
+the one to set up the environments for the game to be played. This includes setting up model 
+structures, initializing views, and communicating with server systems. As this role is distinct, and 
+encapsulates distinct actions of the system, the Game Master actor must be added.

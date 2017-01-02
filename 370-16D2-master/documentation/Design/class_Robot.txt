@@ -1,0 +1,60 @@
+--------------
+// Class: Robot
+--------------
+What it is: The robot class will be responsible for enclosing everything pertaining to the each individual robot. 
+Why it is important: This includes things like actions, status, as well as messaging.
+
+Is used by:
+-GameMaster - GameMaster uses the robot to update the robot position
+-Interpreter (passed a reference of the robot) to decide what to do with the robot's "words"
+-Team - Stores a list of robots for that team
+-Gameboard - Stores a Hashmap of robots that are on a given coordinate (KEY = coordinate VALUE = Robot[])
+-Gameboard - Stores a Hashmap of coordinates that a robot is on (KEY = Robot; VALUE = coordinate)
+
+--------------
+// Variables:
+--------------
+
+//BOTH OF THESE ARE PUBLIC TO BE EASILY CHANGED BY OTHER CLASSES -> Changing to this to not break MVC
++words:jsonobject           // A collectioin of functions that are defined in fourth inside of the completeRobot JSON.
++variables:jsonobject       // A collection of variables defined in Fourth in inside of the completeRobot JSON. 
+
+-inbox:Stack                // Used to hold the messages from other robots -> Private so that other robots can add to it when sending messages
+-movesRemaining :int
+-hasShot :int                    // A variable to keep track if the robot can shoot
+-health:int                 // An independent variable to store the health of the robot during gameplay
++robotJSON:jsonobject      // The complete JSON file provided by the RobotLibrarian. This is NOT edited at all during gameplay and is only set during construction
+-robotID : String                   // Used for quickly looking up a robot on the stats logger
+-movesMade :int                 // Used for calculating which direction the robot is facing
+
+--------------
+// Functions:
+--------------
+
++robot(:jsonobject)         // The creation of a robot - takes a JSON from the RobotLibrarian - Instantiates robotID by combining team+name in construction
+
+//Fourth nonsense: 
++getTeam(): string          // Gets the team from the JSON (SCOUT, SNIPER, TANK)
++getID(): string            // The ID of the robot
+
+//Health:
++setHealth(:int)            // Used to update the health when the robot takes damage
++getHealth(): int           // Used to check the health of the robot
++getType(): enum            // Returns the type of the robot
++isAlive(): bool            // It will check using the getHealth... if it's above 0 it is alive
++getStrength(): int         // Grabs the strength of the robot from the JSON
+
+//Action methods:
++move()                     // Used to move the robot forward one space
++move(:int)                 // Moves forward int times
++movesRemaining(): int      // Used to query how many moves remaining
++movesMade() : int          // Used to show many times the robot has turned from its starting direction
++canShoot(): bool           // Returns true if the robot can still shoot. false if it cannot
++turn(:int)                 // The int is the amount of times to turn
++turn()                     // Turns once clockwise
++shoot()                    // Shoots at the tile in a straight line from the robot
++play()                     // If the robot is a human this function can be called to play the "AI"
+
+// Messaging
++receiveMsg(): string       // Grabs a message from the stack
++sendMsg(:string, :robot)   // Pushes a message to the receiver's stack

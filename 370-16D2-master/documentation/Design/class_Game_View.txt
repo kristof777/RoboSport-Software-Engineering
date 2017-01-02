@@ -1,0 +1,46 @@
+Justification:
+-the game needs to be displayed
+-once again split up controllers into specific components ->>>>>> coHESION BRO
+-uses team to display view for ease of design -> simple to imagine displaying the view
+for a teams robots when you're passed the team
+-visibleRobots has roboType and COLOUR is passed to avoid having the model bleed into the view
+
+Description:
+-displays the view of the game for the team whos turn it is
+-has 3 buttons: move, attack and forfeit
+-hovering over a revealed hex will display the stats of the robots located on the hex
+-has a fog of war png hexagonal map that displayable hexes are drawn ontop of.
+
+Interactions:
+Game Master: recieves coordinates and tanks to display on the board
+Draw: creates a draw of type roboType using overridden classes
+a png image of the hexagonal map(outside of system and not req or part of the system?)
+
+--Variables--
+NONE!
+
+--Functions--
+GameView(moveableCoord[], visibleCoord[], visibleRobots<robotType, coord>, COLOUR ): creates a view with
+	3 buttons: forfeit, attack and move.  creates clickable hexes from the collection of moveableCoords,
+	visible hexes from visibleCoord and visible robots with the visibleRobots dictionary giving them the 
+	COLOUR colour
+
+reDrawSprite(visibleRobots<robotType, coord>): Redraws the sprites onto the map 
+on a robot movement or turn. Will also be called whenever a new tank comes into 
+view or the turn changes to another player. Uses appropriate DrawRobot subclass
+to draw whatever robotType that is needed.
+
+reDrawSight(visibleCoord[], visibleRobots<robotType, coord>): Redraws the sight 
+overlay for all tanks on current team. Will be called on tank movement
+or when the turn changes to another player.
+
+reDrawMove(moveableCoord[], visibleRobots<robotType, coord>): Redraws the possible 
+Move overlay for all tanks on current team. Will be called on tank movement
+or when the turn changes to another player. 
+
+buttonListener(): listens for button press and calls respective controller functions
+from GameMaster.
+
+tileListener(): listens for a tile select and calls the approptate controller function
+from GamMaster.
+

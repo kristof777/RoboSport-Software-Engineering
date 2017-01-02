@@ -1,0 +1,5 @@
+    StatsLogger:
+    -getJson(): returns the JSON
+    -getJSONAspect(String robotID, String aspect): returns a particular aspect for the robot defined by robotID and the aspect given
+    
+    

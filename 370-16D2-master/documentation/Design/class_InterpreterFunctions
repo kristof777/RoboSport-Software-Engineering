@@ -1,0 +1,68 @@
+InterpreterFunctions
+
+Description:
+	This class acts as an interface to the system for the forth interpreter.  
+	All functionality that the forth interpreter will use is provided by these functions.
+	With the exception of a few functions, all arguments and return values are passed on the stack.
+	
+Interactions:
+    -Called by the interpreter.
+    -Calls Robot functions.
+    -Calls getRobotCoord from gameModel.
+
+Variables:
+private Stack<String> stack 
+    holds all variables for the functions to use
+private Robot robot
+
+Functions:
+
+    InterpreterFunctions()
+		constructor will only initialize things.
+	
+    setRobot(Robot)
+		sets the robot whose functions will be called.
+	   
+        All of the following functions mirror those in the RoboSport370 Language document unless additional specification is given.
+    String pop
+        Gets the value off of the top of the stack.
+    void push(String)
+        pushes a Word onto the stack
+    void popAndPrint
+        done when the parser finds "."
+
+    void drop
+    void dup
+    void swap
+    void rot
+    void arithmetic
+    void modulo
+    void comparison
+    void and
+    void or
+    void invert
+    void conditionStatement
+    void guardedLoop
+    void countedLoop
+    void random
+
+    
+    The following functions will call the Robot functions using variables popped from the stack, and pushing their return values to the stack.
+    void health
+    void healthLeft
+    void moves
+    void movesLeft
+    void attack
+    void range
+    void team
+    void type
+    void turn
+    void move
+        This function will need to call getRobotCoord from the GameModel with the robotID.
+    void shoot
+    void check
+    void scan 
+    void identify
+    void send 
+    void mesg
+    void recv

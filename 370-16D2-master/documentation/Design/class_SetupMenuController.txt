@@ -1,0 +1,35 @@
+The SetupMenuController is responsible for all changes inside of the SetupMenuView.
+It ensures that the robot teams are correctly set up.
+
+
+USES: Class_SetupMenuView, Teams, RobotLibrarian, GameMaster
+CALLED BY: StartMenuController
+----------
+//Variables:
+----------
+-   basicStats : JSON                       // Holds the basic stats of all robots in the RobotLibrarian
+-	maps : Image[]							// Stores the images of the various gameboard styles
+-   teams : Team[]                          // Holds the robots of the team
+
+----------
+//Functions:
+----------
+
++SetupMenuController()                        // Initializes the SetupMenuController, and also downloads a basic JSON of all robots from the RL
++getTeamsInCriteria() : string[]              // Gets all of the teams in the basicStats JSON that match the current criteria selected in the view
++getNamesInCriteria() : string[]              // Gets all of the names in the basicStats JSON that match the current criteria selected in the view
++getClassesInCriteria() : string[]            // Gets all of the classes in the basicStats JSON that match the current criteria selected in the view
++sortBy(:string (wins/losses)) : string[]     // Sorts the array string to be returned by either descending in wins or losses
+      
++getStats(:string (robotName), :string (team)) :string  // Returns a string of text of text that pertains to the robot that has been selected
++makeTeams(:JSON)
++getTeams() :JSON
+
+ Example stats:
+ ---------------------------
+ Team: A1 Name: Killer Class: 0
+ Wins: 80  
+ Losses: 0
+ Damage done: xxx
+ Damage taken: xxx 
+ ---------------------------

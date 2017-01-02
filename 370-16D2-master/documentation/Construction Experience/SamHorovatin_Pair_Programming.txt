@@ -1,0 +1,21 @@
+Sam Horovatin Pair Programming with Michael Graham
+22/11/2016 @ 1:30PM - 5:00pm
+
+    Pair programming with mike was an extremely insightful and positive experience. 
+    It allowed me to understand the gameboard class to a higher degree than before.
+    Through working through the math behind the hexagonal grid we where able to 
+    come to a consensus that axial coordinates best fit what we had in mind. Overall
+    I would say pair programing was an excellent method of coding for this portion
+    of the project and would do it again in a heartbeat.
+
+Sam Horovatin Pair Programming with Kristof Mercier
+27/11/2016 @ 1:30PM - 5:00pm
+
+    Pair programming with Kristof was an excellent way to gain understanding of part of
+    the system I had very little to no understanding of prior. As Kristof had been
+    the main creator of the interpreter class, it was immensely enlightening to get
+    explanations of functions and walk through the process during coding. Due to us
+    both thing of the problem at the same time, we where able to come up with a novel 
+    solution to the storage and execution of parsed Json strings. Overall,
+    pair programming was essential (for me at least) to gain a deeper understanding
+    of the system as a whole.

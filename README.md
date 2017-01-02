@@ -9,10 +9,12 @@ Group members: Kristof Mercier, Arianne Bulter, Chris Mykota Ried, Michael Graha
 
 Project: Robosport
   This project was a turn based tank game.  The goal of this course was to learn how proper documentation
-  is done by a oftware engineering design team.
+  is done by a software engineering design team.
 
 My Work on Documentation:
-	I wrote the Interpreter section of the Design document.
+
+	I contributed to the overall project as much of is was writing documents as a group. For an example of 
+	exclusively my work look at the Interpreter section of the Design document.
 	
 My Work on Implementation:
 

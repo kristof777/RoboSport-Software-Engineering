@@ -1,0 +1,108 @@
+Robot---------------------
+---------------------
+
+Variables--------
+Added:
+    - direction : int           The direction that the robot is currently facing
+    - hasAttacked : boolean     True if the robot has attacked, false if not
+
+Functions--------
+Added: 
+    +isValidJSON(Map json) : boolean                Checks if the JSON input is valid in the constructor
+    -makeRobotID() : void                           Creates a RobotID based off of the specifications in the design document
+    -initializeRobotAttributes() : void             Initializes robot attributes based on the type of tank.  
+    -initializeCoordinates() : void                 Initializes starting position of the robot based off of the GangID, GangID 0 will always be RED and red is in the same spot
+    -addToHashMaps(Coordinate coordinate) : void    An internal function that 
+
+Changed:
+    +getStrength() to getAttack() so that it was consistent with the game.pdf document attributes
+
+
+Gameboard---------------------
+---------------------
+
+Variables--------
+Added: 
+    +coordinates : Hashmap                                           A hash of each coordinate keyed to the pixel point on the graph
+    -boundingCircles : Hashmap                                       A hash of bounding circles for each hex for easy calculation of mouse clicks
+    -radius : int                                                    The radius of each hexagon
+    -point : point                                                   The position that the gameboard will start at
+    +robotCoordinate<Robot, Coordinate> instead of robotCoordinate<RobotID, Coordinate>
+
+Functions--------
+Added: 
+    +Coordinate add(Coordinate a, Coordinate b) :                    Coordinate Returns the coordinate that results from adding two coordinates
+    +getKeyFromRange(int x, int y) : Coordinate                      Returns the key (a coordinate) that corresponds with a given range
+    +getKeyFromRange(Coordinate coordinate) : Coordinate             Returns the key (a coordinate) that corresponds with a given range
+    +getNeighbors(Coordinate coordinate, int range) : Coordinate[]   Returns an array of all of the neighbors of the given coordinate
+    +getNeighbor(Coordinate start, Coordinate end) : Coordinate      Returns a neighbor coordinate ** For internal use only
+    +direction(Coordinate coordinate, int direction) : Coordinate    Returns the neighbor in a given direction
+    +getRadius() : int                                               Returns the radius of the gameboard
+    -buildGrid() : void                                              Builds a grid and adds all corresponding coordinates in it to the coordinates Hashmap
+
+Internal Classes--
+Added: 
+    CircleRange---------------------
+    ---------------------
+
+        Variables--------
+            -point : Point           The position that the circle is to be drawn
+            -radius : int            The radius of the circular range
+
+        Functions--------
+            +CircleRange(Point origin, int radius) : CircleRange     Creates a new circular range
+            -inRange(Point point) : boolean                          Checks if a given point is in range
+
+
+GameScreen---------------------
+---------------------
+
+Variables--------
+    -selectedHex      : Coordinate              A coordinate that is selected (will be changed by the GameMaster)
+    -gameboard : Gameboard                      The gameboard instance
+
+Functions--------
+Added:
+    +paintComponent(Graphics g) : void          Responsible for redrawing the panel
+    -drawGrid() : void                          Draws the basic hex grid. Called by paintComponent
+    -highlight(Coordinate c, Color cl)          Highlights the given hex the color given. Called by paintComponent
+    -highLightNeighbors(Coordinate c, Color cl, int r)  Highlights all neighbors of a coordinate in a given range. Called by paintComponent
+    -drawRobots()                               Draws all robots their respective color. Called by paintComponent
+    -makeHex(int x, int y, int r) : Polygon     Creates a Polygon in a hexagon shape and returns it. Called by drawGrid
+    -drawCenteredCircle(Graphics2D g, int x, int y, int r)      Only used for debugging. Used to show the bounding circle of each hex
+
+
+GameMaster--
+Added:
+    -implementation of turns                    Our understanding of how turns went was wrong.  We thought (for example)
+                                                if a team has 1 robot that one robot would move 3 times in a turn (once
+                                                each round).  That wasn't the case.  Each robot moves once per turn so
+                                                our idea of a turn system where each team has a circularly linked list
+                                                wouldn't work.  Instead we chose to implement a queue of all the robots
+                                                inserted in the proper order for the first round of the game.  Then by
+                                                removing and adding robots as turns pass we could keep turn order.
+
+    -gangs:                                     an array of the gangs participating in the match
+                                                Reason: needed a way to pick a particular gang for isAI and giving the
+                                                GameMaster a gang field was the most obvious solution
+
+
+StatsLogger--
+Added:
+    +hashmap of robots and stats                We didn't know how gson would work specifically but as it turns out you
+                                                can just give it a hashmap to generate a JSON with then edit the variables
+                                                through the hashmap to update them
+    -inner RobotStats class                     An inner class specifically for logging updates with regards to the robots.
+                                                The robot class doesn't have enough fields to hold all the data that needs
+                                                to be logged so we created an inner class that would have fields only
+                                                relavant to logging stats.  This makes JSON generation very easy as we
+                                                can, with our hashmap,  map robotIDs to RobotStat classes and pass that
+                                                to GSON to create us our JSON file.
+
+
+Internal Classes--
+Added: 
+    Input---------------------
+    ---------------------
+    (Implements MouseListener)
+        Registers mouse clicks... Not 100% complete

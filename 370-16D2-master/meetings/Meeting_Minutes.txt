@@ -1,0 +1,31 @@
+Meeting Minutes
+---------------
+Date: October 16, 2016
+Time: 8:20PM - 10:00PM
+Purpose: Design Document Outline and Priorities
+People Present: Michael, Chris, Arianne, Kristoff, Sam
+Timekeeper/Notetaker: Michael
+
+Git:
+Arianne: Last time we devided the sections and assigned them to each person in the group. I think that we should all work together on this unlike last time.
+Group: Agreed.
+Michael: We also need to finish this much sooner so that we can review it more instead of leaving it to the last minute. How about Wednesday? 
+Group: Agreed
+
+Archetecture:
+Kristoff: Okay, Originally we planned for MVC, it's fine, but it ends up with a lot of stuff being done in one portion and not in the others if done incorrectly. Another group suggested Connected Components, which provides modularity, but it doesn't make it all in the same spot. 
+Chris: What kind of Archetecture are you thinking of Sam?
+Sam: End-Tier - it's more specified for server stuff, it may be useful for handling JSON.
+Kristoff: We need to ensure modularity. We also need to consider the question "Why is this better than MVC?"
+Kristoff: The advantage to End-tire is that the fourth gibberish can model Tier if I'm understanding the Fourth stuff correctly.
+Group: We're going to revise our requirements document a bit before we decide on the Archetecture.
+
+What is a Design Document:
+Arianne: We need to be very clear why we are including something and if we're not sure it needs to be cut. We should ask Dutchyn if we're not sure.
+Chris: It might be more important to not ask him as it's part of the engineers role to come up with good solutions to problems.
+Kristoff: I don't think it is harmful to get clarification where necessary. I think we should use all of the resources we have.
+Arianne: We also need to keep track of all risks and assumptions that are taking place
+
+Gameboard:
+Michael: How are we going to store the gameboard? - There are three prominent ways: Cartesian, Cube and Axial - all will result in lost space. 
+Group: Not sure yet, investigating further options

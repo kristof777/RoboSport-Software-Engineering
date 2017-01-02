@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.SetUpMenu">
+  <grid id="27dc6" binding="start" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="15" y="20" width="1859" height="716"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+      <inheritsPopupMenu value="false"/>
+      <minimumSize width="1400" height="650"/>
+      <preferredSize width="1500" height="700"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="9c77c" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="4" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="439" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="ddc40" layout-manager="GridLayoutManager" row-count="8" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="73295" layout-manager="GridLayoutManager" row-count="7" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="8" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="fce77" class="javax.swing.JButton" binding="purpleButton">
+                    <constraints>
+                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="104" height="20"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <enabled value="false"/>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <text value="Purple"/>
+                    </properties>
+                  </component>
+                  <component id="51bd4" class="javax.swing.JButton" binding="greenButton" default-binding="true">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <enabled value="false"/>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <text value="&amp;Green"/>
+                    </properties>
+                  </component>
+                  <component id="9175a" class="javax.swing.JButton" binding="yellowButton">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <enabled value="false"/>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <text value="Yellow"/>
+                    </properties>
+                  </component>
+                  <component id="a53b5" class="javax.swing.JButton" binding="orangeButton">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <enabled value="false"/>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <text value="Orange"/>
+                    </properties>
+                  </component>
+                  <component id="b45b8" class="javax.swing.JButton" binding="redButton" default-binding="true">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <enabled value="false"/>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <text value="&amp;Red"/>
+                    </properties>
+                  </component>
+                  <component id="9e699" class="javax.swing.JRadioButton" binding="isAIgreen">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                      <enabled value="false"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="c0f47" class="javax.swing.JRadioButton" binding="isAIblue">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                      <enabled value="false"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="ee95c" class="javax.swing.JRadioButton" binding="isAIpurple">
+                    <constraints>
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="35" height="20"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                      <enabled value="false"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="bf9e" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <text value="Team Colour:              Select if team is AI:"/>
+                    </properties>
+                  </component>
+                  <component id="c3e91" class="javax.swing.JButton" binding="blueButton">
+                    <constraints>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <enabled value="false"/>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <text value="Blue"/>
+                    </properties>
+                  </component>
+                  <component id="ddf90" class="javax.swing.JRadioButton" binding="isAIyellow">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                      <enabled value="false"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="2f251" class="javax.swing.JRadioButton" binding="isAIred">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                      <enabled value="false"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="76f9c" class="javax.swing.JRadioButton" binding="isAIorange">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                      <enabled value="false"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="dfa48" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="100" height="100"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <enabled value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="34e3e" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="b9689" class="javax.swing.JButton" binding="backButton" default-binding="true">
+                    <constraints/>
+                    <properties>
+                      <enabled value="true"/>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <text value="Back"/>
+                      <verticalAlignment value="0"/>
+                    </properties>
+                  </component>
+                  <component id="315a3" class="javax.swing.JButton" binding="startButton" default-binding="true">
+                    <constraints/>
+                    <properties>
+                      <enabled value="false"/>
+                      <font name="Roboto Medium" size="18" style="0"/>
+                      <inheritsPopupMenu value="true"/>
+                      <text value="Start"/>
+                      <verticalAlignment value="0"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="73908" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="100" height="100"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                  <enabled value="true"/>
+                  <focusable value="true"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="SetUpMenu.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="ca856" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </grid>
+      <component id="78aaf" class="javax.swing.JRadioButton" binding="twoPlayers">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Roboto Medium" size="18" style="0"/>
+          <text value="2 Player Game"/>
+        </properties>
+      </component>
+      <component id="157b4" class="javax.swing.JRadioButton" binding="threePlayers">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Roboto Medium" size="18" style="0"/>
+          <text value="3 Player Game"/>
+        </properties>
+      </component>
+      <component id="3c9a0" class="javax.swing.JRadioButton" binding="sixPlayers">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Roboto Medium" size="18" style="0"/>
+          <selected value="false"/>
+          <text value="6 Player Game"/>
+        </properties>
+      </component>
+      <grid id="b9f64" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+        </properties>
+        <border type="none">
+          <color color="-16777216"/>
+        </border>
+        <children>
+          <component id="2e0cf" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="2" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Roboto Thin" size="72" style="0"/>
+              <text value="Robo Sport"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="NumberPlayersGroup">
+      <member id="78aaf"/>
+      <member id="157b4"/>
+      <member id="3c9a0"/>
+    </group>
+  </buttonGroups>
+</form>

@@ -1,0 +1,20 @@
+Justification:
+-our game is on one screen ->  need a screen between turns to prevent accidently viewing of
+classified information 8]
+-need to have entire screen covered -> if it is a dialogue box players could drag it off and see
+the screen
+
+Description:
+-a screen with some kind of graphic on it, an ok button to confirm if the controller has been
+passed and a message saying "Pass to team X" where X = the teams whos turn it is
+
+Interactions:
+Input Controller: listener calls event in input controller
+Game View: is created in game view and calls game view once ok is clicked
+
+variables:
+NONE!
+
+Functions:
+PassTheControlsView(teamNumber:int): creates a window with a graphic, an ok button and a message saying "Pass the controller to teamNumber"
+ 	

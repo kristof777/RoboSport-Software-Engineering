@@ -1,0 +1,33 @@
+Justification:
+-drawing of robots would make the game view class a mess
+-able to use this abstract class with function over riding for a clean solution
+-more portable -> if you want to add more robots just have them extend this
+function -> easy to implement
+
+Definition:
+-an abstract class that is extended by 3 sub classes that draw a robot and (NICE TO HAVE ALERT) handles
+it's animations if turning and moving
+
+Interactions:
+Game View: gets created in game view
+
+--Variables--
+NONE!!
+
+
+--Functions--
+DrawRobot(coord, COLOUR, turns): draws a tank at coordinate facing turn % 6 
+	where 0 is the direction the robot was facing at the start of the game (based off teams enumerated colour type and mapping 
+	each side of the hexagon to the enumerated value as shown below)
+ 	
+	0
+     ---
+  5 /	  \ 1
+  4 \	  / 2
+     ---
+	3
+
+
+nice-to-haves:
+-robot turns slowly to go to it's new destination
+-robot plays a tread spinning animation while moving to it's direction

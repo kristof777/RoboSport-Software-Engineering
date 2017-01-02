@@ -1,0 +1,31 @@
+Justification:
+-over riding functions make for simpler easier to maintain code
+-need to draw a sniper robot
+
+
+Description:
+-a sub class of DrawRobot draws a sniper tank at coord facing direction given 
+using method overrides
+
+Interactions:
+Game View: called in game view with parameters
+
+
+--Functions--
+DrawRobot(coord, COLOUR, turns): draws a sniper robot at coordinate facing turn % 6 
+	where 0 is the direction the robot was facing at the start of the game (based off teams enumerated colour type and mapping 
+	each side of the hexagon to the enumerated value as shown below)
+ 	
+	0
+     ---
+  5 /	  \ 1
+  4 \	  / 2
+     ---
+	3
+
+
+nice-to-haves:
+-robot turns slowly to go to it's new destination
+-robot plays a tread spinning animation while moving to it's direction
+
+

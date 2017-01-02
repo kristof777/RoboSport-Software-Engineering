@@ -1,0 +1,25 @@
+Justificaton:
+-need some way to represent teams for the view and game master
+-displaying the fog of war for a team is made much simpler by passing the team to the view
+
+Description:
+-a collection of robots that represent a team that has a colour
+
+
+Interactions:
+-game master: contains a list of the teams
+-Stats Logger: for creation of the JSON
+-SetupController: contains::creates the team for the game
+
+
+--Variables--
+colour: the colour of the team
+Robots[]: collection of robots associated with the team
+name: name of the team
+
+
+--Functions--
+Team(Robots[], colour, name): team : creates and intializes a team with the robots, colour and name passed.  Also initializes the robots
+getRobots(): robots[]: returns a collection of robots associated with the team
+getName(): string: returns the name of the team
+getColour(): int: returns the colour of the team
