@@ -18,3 +18,5 @@ My Work on Documentation:
 My Work on Implementation:
 
 	For an example of finalized code that I worked on, go to the Interprerter and InterpreterFunctions classes.
+	
+I did not do the unit testing for the InterpreterFunctiopns class, and had I continued to work on this project I would have redone them.
